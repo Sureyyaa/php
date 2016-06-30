@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>faktorial</title>
+</head>
+<body>
+
+<?php 
+
+	@$reqem = $_POST["reqem"];
+
+	class Factorial {
+
+		public $eded=1;
+
+		public function hesabla($x){
+
+			for($i=1; $i<=$x; $i++){
+				
+				$this->eded=$this->eded*$i;
+			}
+			echo $this->eded;
+		}
+	}
+
+	$hesab = new Factorial;
+
+ ?>
+
+
+
+	<h3>Ededin faktorialinin hesablanmasi</h3>
+
+	<form action="" method="post">
+		<input type="text" name="reqem" placeholder="Reqemi daxil edin">
+		<input type="submit" value="hesabla">
+	</form>
+	<p>
+		<?php
+            echo   $hesab->hesabla($reqem);
+		?>
+	</p>
+
+</body>
+</html>
